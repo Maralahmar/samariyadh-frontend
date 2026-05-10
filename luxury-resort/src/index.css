@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Typography: refined serif + Cairo; Parisienne for subtle English flourish */
+  --font-display: 'Cormorant Garamond', 'Cairo', Georgia, serif;
+  --font-body: 'Cairo', system-ui, sans-serif;
+  --font-accent: 'Parisienne', cursive;
+
+  /*
+   * Semantic tokens (legacy class names preserved).
+   * Matches official lockup colors in public/logo.png (metallic gold, bronze, warm neutrals).
+   * brand-* names are historical; values map to logo gold / bronze / champagne.
+   */
+  --color-brand-purple: #b8860b;
+  --color-brand-deep: #5c4033;
+  --color-brand-lavender: #e8d5b7;
+  --color-brand-emerald: #c9a052;
+  --color-brand-forest: #704214;
+  --color-brand-beige: #f2f2f2;
+  --color-brand-soft: #ebe8e4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-beige);
+  color: #3a342f;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-accent-en {
+  font-family: var(--font-accent);
+}
