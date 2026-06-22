@@ -61,6 +61,7 @@ export function LegalDocumentPage({ variant }: { variant: Variant }) {
         description={seoDescription}
         path={path}
         brandImageAlt={t('brandShort')}
+        siteName={t('brandShort')}
       />
       <Navbar />
       <main className="min-h-svh bg-brand-beige pb-28 md:pb-16">

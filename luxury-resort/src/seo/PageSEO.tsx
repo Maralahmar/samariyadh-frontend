@@ -10,6 +10,7 @@ type PageSEOProps = {
   path: string
   keywords?: string
   brandImageAlt: string
+  siteName: string
 }
 
 export function PageSEO({
@@ -19,6 +20,7 @@ export function PageSEO({
   path,
   keywords,
   brandImageAlt,
+  siteName,
 }: PageSEOProps) {
   useLayoutEffect(() => {
     const siteUrl = getSiteUrl()
@@ -28,6 +30,7 @@ export function PageSEO({
     const ogUrl = canonicalUrl
     const ogImageUrl = absoluteUrl(origin, OG_IMAGE_PATH)
     const ogLocale = locale === 'ar' ? 'ar_SA' : 'en_US'
+    const ogLocaleAlternate = locale === 'ar' ? 'en_US' : 'ar_SA'
 
     applyPageMeta({
       title,
@@ -38,8 +41,10 @@ export function PageSEO({
       ogImageUrl,
       ogImageAlt: brandImageAlt,
       ogLocale,
+      ogLocaleAlternate,
+      ogSiteName: siteName,
     })
-  }, [locale, title, description, path, keywords, brandImageAlt])
+  }, [locale, title, description, path, keywords, brandImageAlt, siteName])
 
   return null
 }

@@ -24,12 +24,31 @@ export default defineConfig(({ mode }) => {
       {
         name: 'inject-build-seo',
         transformIndexHtml(html) {
-          if (!siteUrl || !ogImage) return html
-          const extra = `
+          if (!siteUrl) return html
+
+          const canonical = `${siteUrl}/`
+          const hreflang = ['ar-SA', 'en-SA', 'x-default']
+            .map(
+              (lang) =>
+                `    <link rel="alternate" hreflang="${lang}" href="${canonical}" />`,
+            )
+            .join('\n')
+
+          return html.replace(
+            '</head>',
+            `${hreflang}
+    <link rel="canonical" href="${canonical}" />
+    <meta property="og:url" content="${canonical}" />
+    <meta name="twitter:card" content="summary_large_image" />${
+      ogImage
+        ? `
     <meta property="og:image" content="${ogImage}" />
-    <meta property="og:image:alt" content="Samar Riyadh Al Ammariyah Rest" />
+    <meta property="og:image:alt" content="استراحة سمار الرياض العمارية" />
     <meta name="twitter:image" content="${ogImage}" />`
-          return html.replace('</head>', `${extra}\n  </head>`)
+        : ''
+    }
+  </head>`,
+          )
         },
       },
       {

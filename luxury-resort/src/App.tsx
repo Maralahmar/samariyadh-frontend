@@ -23,6 +23,7 @@ function HomePage() {
         keywords={t('seoHomeKeywords')}
         path="/"
         brandImageAlt={t('brandShort')}
+        siteName={t('brandShort')}
       />
       <JsonLdLodging locale={locale} name={t('brandShort')} description={t('seoHomeDescription')} />
       <Navbar />

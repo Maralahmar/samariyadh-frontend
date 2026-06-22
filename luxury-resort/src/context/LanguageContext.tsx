@@ -32,7 +32,7 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 function detectLocale(): Locale {
-  if (typeof navigator === 'undefined') return 'en'
+  if (typeof navigator === 'undefined') return 'ar'
   return navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en'
 }
 
