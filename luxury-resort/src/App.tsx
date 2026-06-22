@@ -7,10 +7,24 @@ import { Footer } from './components/Footer'
 import { WhatsAppFab } from './components/WhatsAppFab'
 import { MobileDock } from './components/MobileDock'
 import { LegalDocumentPage } from './pages/LegalDocumentPage'
+import { useLanguage } from './context/LanguageContext'
+import { JsonLdLodging } from './seo/JsonLdLodging'
+import { PageSEO } from './seo/PageSEO'
 
 function HomePage() {
+  const { locale, t } = useLanguage()
+
   return (
     <>
+      <PageSEO
+        locale={locale}
+        title={t('seoHomeTitle')}
+        description={t('seoHomeDescription')}
+        keywords={t('seoHomeKeywords')}
+        path="/"
+        brandImageAlt={t('brandShort')}
+      />
+      <JsonLdLodging locale={locale} name={t('brandShort')} description={t('seoHomeDescription')} />
       <Navbar />
       <main className="pb-28 md:pb-0">
         <HeroIntroSection />

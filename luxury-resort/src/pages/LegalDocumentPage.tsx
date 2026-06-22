@@ -5,6 +5,7 @@ import { WhatsAppFab } from '../components/WhatsAppFab'
 import { MobileDock } from '../components/MobileDock'
 import { useLanguage } from '../context/LanguageContext'
 import { privacyPolicy, resortPolicies, type LegalDocument } from '../i18n/legalContent'
+import { PageSEO } from '../seo/PageSEO'
 
 const LEGAL_LAST_UPDATED = new Date(2026, 4, 5)
 
@@ -44,9 +45,23 @@ export function LegalDocumentPage({ variant }: { variant: Variant }) {
   const { locale, t } = useLanguage()
   const doc = variant === 'privacy' ? privacyPolicy[locale] : resortPolicies[locale]
   const updated = t('legalUpdated').replace('{date}', formatLegalDate(locale))
+  const path = variant === 'privacy' ? '/privacy' : '/policies'
+  const seoTitle =
+    variant === 'privacy'
+      ? `${t('seoPrivacyTitle')} · ${t('brandShort')}`
+      : `${t('seoPoliciesTitle')} · ${t('brandShort')}`
+  const seoDescription =
+    variant === 'privacy' ? t('seoPrivacyDescription') : t('seoPoliciesDescription')
 
   return (
     <>
+      <PageSEO
+        locale={locale}
+        title={seoTitle}
+        description={seoDescription}
+        path={path}
+        brandImageAlt={t('brandShort')}
+      />
       <Navbar />
       <main className="min-h-svh bg-brand-beige pb-28 md:pb-16">
         <div className="mx-auto max-w-3xl px-4 py-10 lg:px-8 lg:py-14">

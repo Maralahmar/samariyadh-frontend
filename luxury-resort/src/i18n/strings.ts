@@ -179,6 +179,20 @@ export const translations: Record<Locale, Messages> = {
 
     legalBackHome: 'Back to home',
     legalUpdated: 'Last updated: {date}',
+
+    seoHomeTitle: 'Samar Riyadh Al Ammariyah Rest | Luxury Private Resort Riyadh',
+    seoHomeDescription:
+      'Private luxury resort in Al Ammariyah, Riyadh — ~5,000 m² grounds, Majlis for 50 guests, dining for 40, catering kitchen, landscaped lawns and fountains. Host weddings, retreats, and premium events. Book via WhatsApp.',
+    seoHomeKeywords:
+      'luxury resort Riyadh, private rest Al Ammariyah, wedding venue Riyadh, Majlis Saudi Arabia, corporate retreat Riyadh, Samar rest, Al Ammariyah resort',
+
+    seoPrivacyTitle: 'Privacy Policy',
+    seoPrivacyDescription:
+      'Privacy practices for Samar Riyadh Al Ammariyah Rest — website visits, WhatsApp concierge inquiries, cookies, third-party maps, and Saudi personal data protection.',
+
+    seoPoliciesTitle: 'Policies',
+    seoPoliciesDescription:
+      'Booking, conduct, photography, safety, accessibility, and liability policies for events and stays at Samar Riyadh Al Ammariyah Rest in Riyadh.',
   },
   ar: {
     brandShort: 'استراحة سمار الرياض العمارية',
@@ -223,7 +237,7 @@ export const translations: Record<Locale, Messages> = {
     highlightSecurity: 'الأمن',
     highlightParking: 'المواقف',
 
-    heroTitle: 'حيث تلتقي الفخامة الخالدة بسكينة الهروب الصحراوي.',
+    heroTitle: 'حيث نلتقي بكم في الفخامة.',
     heroSubtitle:
       'منتجع خاص فاخر في العمارية بالرياض — صُمم ليمنحكم مناسبات استثنائية، وتجارب ضيافة راقية، وخصوصية لا تضاهى.',
     heroExplore: 'اكتشف استراحة سمار الرياض العمارية',
@@ -257,12 +271,12 @@ export const translations: Record<Locale, Messages> = {
       'من مجالس الضيافة إلى المسطحات الخضراء والنوافير، عنوان تحت كل صورة يعبِّر عمّا يظهر في الإطار.',
 
     experienceGallery01: 'مطبخ ضيافة راقٍ — كوارتز وخزائن خشبية داكنة',
-    experienceGallery02: 'جناح خارجي للفيلا — حجر، واجهات زجاجية، وممرات وصول',
+    experienceGallery02: 'جناح خارجي — حجر، واجهات زجاجية، وممرات وصول',
     experienceGallery03: 'مدخل رئيسي عند الغروب — إضاءة على السور ونخيل وطريق',
     experienceGallery04: 'صالة ولائم — طاولات دائرية وسقوف متدرجة ومضاءة بذكاء',
     experienceGallery05: 'دورة مياه بتصميم فندقي — رخام أسود وأبيض متباين',
     experienceGallery06: 'صف مغاسل للضيوف — رخام ومرآى بإضاءة خلفية ناعمة',
-    experienceGallery07: 'واجهة مسائية — إضاءة دافئة على الحجر ومسار منسّق',
+    experienceGallery07: 'واجهة مسائية — إضاءة على الحجر ومسار منسّق',
     experienceGallery08: 'صالة رسمية تفتح على جلسة طعام خاصة',
     experienceGallery09: 'مجلس واسع — جلوس على محيط القاعة بإطارات ذهبية ورخام',
     experienceGallery10: 'مسطحات عشبية — ممر حجري، نخيل، وخلفية تلال صحراوية',
@@ -352,5 +366,19 @@ export const translations: Record<Locale, Messages> = {
 
     legalBackHome: 'العودة للرئيسية',
     legalUpdated: 'آخر تحديث: {date}',
+
+    seoHomeTitle: 'استراحة سمار الرياض العمارية | منتجع خاص فاخر بالرياض',
+    seoHomeDescription:
+      'منتجع خاص فاخر في حي العمارية بالرياض — مساحة تقارب ٥٠٠٠ م²، مجلس حتى ٥٠ ضيفًا، صالة طعام حتى ٤٠ ضيفًا، مطبخ ضيافة متكامل، مساحات خضراء ونوافير. مناسبات وأعراس ولقاءات تنفيذية. احجز عبر واتساب.',
+    seoHomeKeywords:
+      'استراحة فاخرة الرياض، منتجع خاص العمارية، قاعات أعراس الرياض، مجلس ضيافة، استراحة سمار، ضيافة راقية السعودية',
+
+    seoPrivacyTitle: 'سياسة الخصوصية',
+    seoPrivacyDescription:
+      'كيف تتعامل استراحة سمار الرياض العمارية مع الخصوصية عند زيارة الموقع أو التواصل مع الكونسييرج عبر واتساب، والملفات التقنية، وحماية البيانات في المملكة.',
+
+    seoPoliciesTitle: 'السياسات',
+    seoPoliciesDescription:
+      'سياسات الحجز والسلوك والتصوير والسلامة وإتاحة الوصول والمسؤولية للفعاليات والإقامات في استراحة سمار الرياض العمارية.',
   },
 }
